@@ -1,3 +1,10 @@
 var fs = require('fs');
 
-fs.createReadStream('index.html').pipe(fs.createWriteStream('.build/index.html'));
+
+var fs = require('fs');
+var buildDir = './build';
+
+if (!fs.existsSync(buildDir)){
+    fs.mkdirSync(buildDir);
+}
+fs.createReadStream('index.html').pipe(fs.createWriteStream(buildDir + '/index.html'));
