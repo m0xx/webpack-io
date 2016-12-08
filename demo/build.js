@@ -2,7 +2,7 @@ var fs = require('fs');
 
 
 var fs = require('fs');
-var buildDir = './build';
+var buildDir = './.build';
 
 if (!fs.existsSync(buildDir)){
     fs.mkdirSync(buildDir);
